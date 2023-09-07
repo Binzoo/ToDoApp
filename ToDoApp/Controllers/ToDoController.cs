@@ -56,6 +56,42 @@ namespace ToDoApp.Controllers
             return RedirectToAction("ShowList");
         }
 
+        //get view
+        public IActionResult Edit(int id)
+        {
+            var data = _db.toDoApps.Find(id);
+            if(data == null)
+            {
+                return NotFound();
+            }
+            return View(data);
+        }
+
+
+        [HttpPost]
+        public IActionResult Edit(int? id, ToDoModel toDo)
+        {
+            if(id != toDo.id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _db.toDoApps.Update(toDo);
+                    _db.SaveChanges();
+                    return RedirectToAction("ShowList");
+                }
+                catch
+                {
+                    return NotFound();  
+                }
+            }
+            return View();
+        }
+
 
     }
 }

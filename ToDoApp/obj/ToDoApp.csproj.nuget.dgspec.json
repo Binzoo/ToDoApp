@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/binamrathapa/Projects/ToDoApp/ToDoApp/ToDoApp/ToDoApp.csproj": {}
+    "C:\\Users\\binam\\Downloads\\ToDoApp\\ToDoApp\\ToDoApp\\ToDoApp.csproj": {}
   },
   "projects": {
-    "/Users/binamrathapa/Projects/ToDoApp/ToDoApp/ToDoApp/ToDoApp.csproj": {
+    "C:\\Users\\binam\\Downloads\\ToDoApp\\ToDoApp\\ToDoApp\\ToDoApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/binamrathapa/Projects/ToDoApp/ToDoApp/ToDoApp/ToDoApp.csproj",
+        "projectUniqueName": "C:\\Users\\binam\\Downloads\\ToDoApp\\ToDoApp\\ToDoApp\\ToDoApp.csproj",
         "projectName": "ToDoApp",
-        "projectPath": "/Users/binamrathapa/Projects/ToDoApp/ToDoApp/ToDoApp/ToDoApp.csproj",
-        "packagesPath": "/Users/binamrathapa/.nuget/packages/",
-        "outputPath": "/Users/binamrathapa/Projects/ToDoApp/ToDoApp/ToDoApp/obj/",
+        "projectPath": "C:\\Users\\binam\\Downloads\\ToDoApp\\ToDoApp\\ToDoApp\\ToDoApp.csproj",
+        "packagesPath": "C:\\Users\\binam\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\binam\\Downloads\\ToDoApp\\ToDoApp\\ToDoApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/binamrathapa/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\binam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -72,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.400/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

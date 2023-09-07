@@ -1,0 +1,49 @@
+﻿@model ToDoModel
+
+
+<style>
+    .form-container {
+        max-width: 450px; /* You can adjust this value to your preference */
+        margin: 0 auto; /* Centers the form container horizontally */
+        margin-top: 3%;
+    }
+
+    .form-group {
+        opacity: 100%;
+        border-radius: 40px;
+    }
+</style>
+<partial name="_Notification" />
+
+<div class="form-container bg-black p-4 bg-opacity-75 rounded-3">
+    <!-- Changed p-8 to p-4 for less padding, you can adjust as needed -->
+
+    <form method="post">
+        <div class="form-group">
+            <input asp-for="TaskName" type="text" class="form-control" placeholder="Task Name">
+            <br />
+
+            <input asp-for="TaskDescripion" type="text" class="form-control" placeholder="Task Description">
+            <br />
+
+            <input asp-for="Date" type="date" class="form-control" placeholder="Due Date">
+            <br />
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-success mt-3">  <i class="bi bi-plus-circle"></i> Update Task</button> <!-- Added mt-3 for margin-top -->
+        </div>
+    </form>
+    <br />
+    <div class="text-center">
+        <a asp-controller="ToDo" asp-action="ShowList" class="btn btn-primary mt-3">
+            <i class="bi bi-view-list"></i>  View List
+        </a>
+    </div>
+
+</div>
+
+
+
+
+
+
