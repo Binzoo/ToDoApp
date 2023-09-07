@@ -1,0 +1,71 @@
+﻿@model IEnumerable<ToDoModel>
+
+<br />
+
+<div class="container">
+    <a class="btn btn-success" asp-controller="ToDo" asp-action="Index">
+        <i class="bi bi-plus-circle"></i> Add Task
+    </a>
+</div>
+
+<br />
+
+<partial name="_Notification" />
+
+<div class="row bg-dark text-white py-3">
+    <div class="col-md-12">
+        <table class="table table-dark table-borderless table-hover">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Task Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Due Date</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <input type="radio" class="crossout-radio" name="taskRow-@item.id" data-row-id="@item.id" />
+                        </td>
+                        <td class="task">@item.TaskName</td>
+                        <td class="task">@item.TaskDescripion</td>
+                        <td  class="task">@item.Date</td>
+                        <td>
+                            <a class="btn btn-danger" asp-controller="ToDo" asp-action="Delete" asp-route-id="@item.id">
+                                <i class="bi bi-trash"></i> Delete
+                            </a>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const radios = document.querySelectorAll('.crossout-radio');
+
+    radios.forEach(radio => {
+        radio.addEventListener('change', function() {
+            const rowId = this.getAttribute('data-row-id');
+            const row = document.querySelector(`input[data-row-id="${rowId}"]`).closest('tr');
+            const tasks = row.querySelectorAll('.task');
+
+            tasks.forEach(task => {
+                if (this.checked) {
+                    task.style.textDecoration = 'line-through';
+                } else {
+                    task.style.textDecoration = 'none';
+                }
+            });
+        });
+    });
+});
+
+</script>

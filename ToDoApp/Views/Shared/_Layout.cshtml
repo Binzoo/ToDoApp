@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ToDoApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ToDoApp.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css" rel="stylesheet">
+   
+
+    <style>
+        body {
+            transition: opacity 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .text-center{
+            margin-top: 2%;
+        }
+    </style>
+
+
+</head>
+<body>
+    <header>
+        <h1 class="text-center">
+            <i class="bi bi-check2-all"></i> To Do App
+        </h1>
+    </header>
+   
+    @*<script>function setBackgroundAndShowContent() {
+            const imageUrl = `https://source.unsplash.com/random/?books`;
+
+            const image = new Image();
+            image.onload = function () {
+                document.body.style.backgroundImage = `url(${imageUrl})`;
+                // Once the image is loaded, reveal the content by changing opacity to 1
+                document.body.style.opacity = '1';
+            }
+            image.src = imageUrl;
+        }
+
+        // Set the background and reveal the content once the image is loaded
+        setBackgroundAndShowContent();</script>*@
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <h6 class="text-center">Binamra Thapa - 2023</h6>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+

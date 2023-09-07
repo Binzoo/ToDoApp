@@ -1,0 +1,51 @@
+﻿<Properties StartupConfiguration="{234CA756-FB09-4F54-845B-196250AB782B}|https">
+  <MonoDevelop.Ide.ItemProperties.ToDoApp PreferredExecutionTarget="/Applications/Brave Browser.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ToDoApp/Views/ToDo/ShowList.cshtml">
+    <Files>
+      <File FileName="ToDoApp/Controllers/ToDOController.cs" Line="53" Column="11" />
+      <File FileName="ToDoApp/Views/ToDo/Index.cshtml" Line="8" Column="22" />
+      <File FileName="ToDoApp/Program.cs" Line="31" Column="1" />
+      <File FileName="ToDoApp/Views/ToDo/ShowList.cshtml" Line="45" Column="21" />
+      <File FileName="ToDoApp/wwwroot/css/site.css" Line="14362" Column="21" />
+      <File FileName="ToDoApp/appsettings.json" Line="1" Column="1" />
+      <File FileName="ToDoApp/Models/ToDoModel.cs" Line="19" Column="1" />
+      <File FileName="ToDoApp/Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="ToDoApp/Models/DatabaseContext.cs" />
+      <File FileName="ToDoApp/Views/Shared/Error.cshtml" Line="1" Column="1" />
+      <File FileName="ToDoApp/Views/Shared/_ValidationScriptsPartial.cshtml" Line="1" Column="1" />
+      <File FileName="ToDoApp/Views/Shared/_Layout (copy).cshtml" Line="19" Column="15" />
+      <File FileName="ToDoApp/Views/Shared/_Notification (copy).cshtml" Line="25" Column="13" />
+      <File FileName="ToDoApp/Views/Shared/_Layout.cshtml.css" Line="33" Column="14" />
+      <File FileName="ToDoApp/Views/_ViewStart.cshtml" Line="1" Column="1" />
+      <File FileName="ToDoApp/Views/Shared/_Notification.cshtml.css" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ToDoApp" expanded="True">
+            <Node name="ToDoApp">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views">
+                <Node name="Shared" expanded="True" />
+                <Node name="ToDo" expanded="True">
+                  <Node name="ShowList.cshtml" selected="True" />
+                </Node>
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
