@@ -22,10 +22,11 @@ namespace ToDoApp.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            return View();
+            return View("Index");
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Index(ToDoModel toDoModel )
         {
             if (ModelState.IsValid)
@@ -33,13 +34,16 @@ namespace ToDoApp.Controllers
                 _db.toDoApps.Add(toDoModel);
                 _db.SaveChanges();
                 TempData["success"] = "You have sucessfully added task";
+                return RedirectToAction("Index");
             }
-            return RedirectToAction("Index");
+            return View(toDoModel);
         }
 
         public IActionResult ShowList()
         {
-            var data = _db.toDoApps.ToList();
+            var data = (from t in _db.toDoApps
+                        orderby t.Date
+                        select t).ToList();
 
             return View(data);
         }
@@ -69,6 +73,7 @@ namespace ToDoApp.Controllers
 
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Edit(int? id, ToDoModel toDo)
         {
             if(id != toDo.id)
@@ -82,6 +87,7 @@ namespace ToDoApp.Controllers
                 {
                     _db.toDoApps.Update(toDo);
                     _db.SaveChanges();
+                    TempData["success"] = "You have sucessfully updated task";
                     return RedirectToAction("ShowList");
                 }
                 catch
@@ -89,7 +95,7 @@ namespace ToDoApp.Controllers
                     return NotFound();  
                 }
             }
-            return View();
+            return View(toDo);
         }
 
 

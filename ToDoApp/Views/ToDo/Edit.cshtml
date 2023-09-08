@@ -21,12 +21,14 @@
     <form method="post">
         <div class="form-group">
             <input asp-for="TaskName" type="text" class="form-control" placeholder="Task Name">
+            <span asp-validation-for="TaskName" class="text-danger"></span>
             <br />
 
             <input asp-for="TaskDescripion" type="text" class="form-control" placeholder="Task Description">
             <br />
 
             <input asp-for="Date" type="date" class="form-control" placeholder="Due Date">
+            <span asp-validation-for="Date" class="text-danger"></span>
             <br />
         </div>
         <div class="text-center">
